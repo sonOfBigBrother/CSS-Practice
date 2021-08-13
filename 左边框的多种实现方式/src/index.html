@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>左边框的多种实现方式</title>
+    <link href="./index.css" rel="styleSheet" />
+    <style>
+      div {
+        position: relative;
+        width: 200px;
+        height: 60px;
+        background: #ddd;
+        margin: 15px 0;
+        box-sizing: border-box; /*包含border+padding*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        target共有四个值，分别为
+            _self:默认值，当前页面
+            _blank:通常在新的标签页打开，但用户也可以设置浏览器行为，使其在新窗口打开
+            _parent:当前页面的父级浏览上下文——不存在时，等同_self
+            _top:顶级浏览上下文，若无祖先浏览上下文，则等效为_self
+     -->
+    <h1>
+      <a href="https://github.com/chokcoco/iCSS/issues/51" target="_blank"
+        >查看原博</a
+      >
+    </h1>
+    <h3>使用border</h3>
+    <div class="method1"></div>
+    <h3>使用伪元素</h3>
+    <div class="method2"></div>
+    <h3>使用外box-shadow</h3>
+    <div class="method3"></div>
+    <h3>使用内box-shadow</h3>
+    <div class="method4"></div>
+    <h3>使用drop-shadow()</h3>
+    <div class="method5"></div>
+    <h3>渐变linearGradient</h3>
+    <div class="method6"></div>
+    <!-- 下下之选，比较繁琐 -->
+    <h3>使用outline</h3>
+    <div class="method7"></div>
+    <h3>使用滚动条</h3>
+    <div class="method8"></div>
+    <h3>使用下划线</h3>
+    <div class="method9"></div>
+    <h3>使用first-letter</h3>
+    <div class="method10">1</div>
+    <h3>使用list-style</h3>
+    <div class="method11"></div>
+    
+  </body>
+</html>

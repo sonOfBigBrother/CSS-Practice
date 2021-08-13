@@ -1,0 +1,127 @@
+/* 常规解法，设置边框 */
+.method1 {
+  border-left: 5px solid deeppink;
+}
+
+/* 通过伪类添加 */
+div.method2::after {
+  content: "";
+  width: 5px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: deeppink;
+}
+
+.method3 {
+  box-shadow: -5px 0 0 deeppink;
+  width: 195px;
+  margin-left: 5px;
+}
+
+.method4 {
+  box-shadow: inset 5px 0 0 deeppink;
+}
+
+.method5 {
+  filter: drop-shadow(-5px 0 0 deeppink);
+  width: 195px;
+  margin-left: 5px;
+}
+
+.method6 {
+  /* 渐变线的起点位置90deg等同于to right */
+  background-image: linear-gradient(
+    90deg,
+    deeppink 0px,
+    deeppink 5px,
+    transparent 5px
+  );
+}
+
+/* 使用outline */
+.method7 {
+  outline: 5px solid deeppink;
+  width: 190px;
+  margin-left: 5px;
+  height: 50px;
+}
+.method7::after {
+  position: absolute;
+  content: "";
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: 0px;
+  background: #ddd;
+}
+
+/* 使用滚动条，清奇的思路，赞一个！ 
+** 根据MDN的说明，该伪元素仍属于草案
+*/
+.method8::-webkit-scrollbar {
+  width: 195px;
+  background-color: #ddd;
+}
+.method8 {
+  width: 200px;
+  background: deeppink;
+  overflow-y: scroll;
+}
+
+/* 使用:before伪元素色条的宽度似乎不足 */
+.method9 {
+  overflow: hidden;
+}
+.method9::before {
+  position: absolute;
+  content: "____";
+  font-size: 40px;
+  bottom: 0;
+  text-decoration: underline;
+  color: deeppink;
+  line-height: 60px;
+  transform: rotate(90deg);
+  right: 142px;
+}
+
+/* 使用first-letter伪元素 */
+.method10 {
+  position: relative;
+  overflow: hidden;
+}
+
+.method10::first-letter {
+  background: deeppink;
+  color: transparent;
+  width: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 40px 0px;
+}
+
+.method11 {
+	position: relative;
+	display: list-item;
+	list-style: square inside;
+	padding-left: 5px;
+	line-height: 0;
+	font-size: 600px;
+	overflow: hidden;
+	background: deeppink;
+	color: #ddd;
+}
+.method11::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 60px;
+    z-index: 1;
+}
