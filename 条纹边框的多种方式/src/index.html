@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        background:#9c27b0;
+        border:20px dashed #2196f3;
+      }
+    </style>
+    <link href="./index.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <h1>
+      <a href="https://github.com/chokcoco/iCSS/issues/1" target="_blank"
+        >查看原博</a
+      >
+    </h1>
+    <!-- 利用::after伪元素色设置中间部分为白色 -->
+    <h3>使用after伪元素</h3>
+    <div class="method1"></div>
+    <!-- 
+      设置背景颜色为白色，background-clip为padding-box改变背景绘制区域；
+      使用z-index触发元素产生堆叠上下文，让::before伪元素的背景色跌到div背景色之下
+    -->
+    <h3>使用before伪元素</h3>
+    <div class="method2"></div>
+    <h3>使用内阴影</h3>
+    <div class="method3"></div>
+    <h3>使用渐变</h3>
+    <div class="method4"></div>
+    <!-- <h3>使用drop-shadow()</h3>
+    <div class="method5"></div>
+    <h3>渐变linearGradient</h3>
+    <div class="method6"></div>
+    <h3>使用outline</h3>
+    <div class="method7"></div>
+    <h3>使用滚动条</h3>
+    <div class="method8"></div>
+    <h3>使用下划线</h3>
+    <div class="method9"></div>
+    <h3>使用first-letter</h3>
+    <div class="method10">1</div>
+    <h3>使用list-style</h3>
+    <div class="method11"></div>
+    <h3>使用list-style 2</h3>
+    <div class="method12"></div> -->
+  </body>
+</html>

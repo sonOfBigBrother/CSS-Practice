@@ -125,3 +125,18 @@ div.method2::after {
     line-height: 60px;
     z-index: 1;
 }
+
+.method12{
+  display: list-item;
+  list-style: square inside;
+  width: 200px;
+  height: 60px;
+  padding-left: 5px;
+  line-height: 0;
+  font-size: 9999%;
+  overflow: hidden;
+  background: deeppink;
+  color: #ddd;
+}
+
+ 
