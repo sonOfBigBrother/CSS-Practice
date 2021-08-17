@@ -1,0 +1,29 @@
+.method1 {
+    -webkit-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, .5));
+}
+
+.method2 {
+    position: relative;
+}
+/* 添加倒影图片 */
+.method2::before {
+	content: "";
+	background-image: inherit;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: -100%;
+	transform: rotateX(180deg);
+    background-size: contain;
+}
+/* 添加渐变白色蒙层 */
+.method2:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	bottom: -100%;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 0.5)100%);
+	z-index: 2;
+} 
