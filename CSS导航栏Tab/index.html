@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./index.css" rel="stylesheet" />
+    <style>
+      html,
+      body,
+      div,
+      ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      ul {
+        list-style: none;
+      }
+      h1,h3 {
+          margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <a href="https://github.com/chokcoco/iCSS/issues/54" target="_blank"
+        >查看原博</a
+      >
+    </h1>
+    <h3>使用:target伪类</h3>
+    <div class="container">
+      <div id="content1" class="active">列表1内容:123456</div>
+      <div id="content2">列表2内容:abcdefgkijkl</div>
+
+      <ul class="nav">
+        <li class="active"><a href="#content1">列表1</a></li>
+        <li><a href="#content2">列表2</a></li>
+      </ul>
+
+      <div class="wrap"></div>
+    </div>
+    <!-- <div class="container2">
+        <input class="nav1" id="li1" type="radio" name="nav">
+        <input class="nav2" id="li2" type="radio" name="nav">
+        <ul class='nav'>
+            <li class='active'><label for="li1">列表1</label></li>
+            <li><label for="li2">列表2</label></li>
+        </ul>
+        <div class="content">
+            <div class="content1 default">列表1内容:123456</div>
+            <div class="content2">列表2内容:abcdefgkijkl</div>
+        </div>
+    </div> -->
+  </body>
+</html>
