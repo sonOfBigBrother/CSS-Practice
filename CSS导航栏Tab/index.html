@@ -32,7 +32,8 @@
         >查看原博</a
       >
     </h1>
-    <h3>使用:target伪类</h3>
+    <!-- 添加 <a> 标签添加页面锚点的方式接收点击事件 -->
+    <h3>使用a标签+:target伪类</h3>
     <div class="container">
       <div id="content1" class="active">列表1内容:123456</div>
       <div id="content2">列表2内容:abcdefgkijkl</div>
@@ -44,17 +45,19 @@
 
       <div class="wrap"></div>
     </div>
-    <!-- <div class="container2">
+    <!-- 添加 <input> 标签type="radio"或"checkbox"接收点击事件 -->
+    <h3 style="padding-top: 20px;">使用input标签+:checked伪类，label标签for属性绑定元素</h3>
+    <div class="container">
         <input class="nav1" id="li1" type="radio" name="nav">
         <input class="nav2" id="li2" type="radio" name="nav">
         <ul class='nav'>
-            <li class='active'><label for="li1">列表1</label></li>
+            <li class='active2'><label for="li1">列表1</label></li>
             <li><label for="li2">列表2</label></li>
         </ul>
         <div class="content">
-            <div class="content1 default">列表1内容:123456</div>
-            <div class="content2">列表2内容:abcdefgkijkl</div>
+            <div class="content3 default">列表1内容:123456</div>
+            <div class="content4">列表2内容:abcdefgkijkl</div>
         </div>
-    </div> -->
+    </div>
   </body>
 </html>

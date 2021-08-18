@@ -2,6 +2,7 @@
   position: relative;
   width: 400px;
   margin-left: 20px;
+  margin-bottom: 100px;
 }
 
 .nav {
@@ -26,6 +27,7 @@ li a {
   color: #000;
 }
 
+
 #content1,
 #content2 {
   position: absolute;
@@ -36,19 +38,24 @@ li a {
   border: 1px solid #999;
   box-sizing: border-box;
   padding: 10px;
+  /* 默认菜单内容都不显示 */
   display: none;
+  /* visibility: hidden; */
   width: 100%;
   background: #fff;
 }
 
-
+/* 点击菜单时显示对应内容 */
 #content1:target,
 #content2:target {
   display: block;
+  /* visibility: visible; */
 }
-
+/* 默认选中content1 */
 #content1.active {
   display: block;
+  /* visibility: visible; */
+
 }
 
 .active ~ .nav li:first-child {
@@ -85,4 +92,76 @@ li a {
   height: 100px;
   border: 1px solid #999;
   box-sizing: border-box;
+}
+
+/* 方法二 */
+/* 隐藏input标签 */
+input {
+	display: none;
+}
+
+li label {
+	display: block;
+	width: 200px;
+	line-height: 36px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.content {
+	position: relative;
+	overflow: hidden;
+	width: 400px;
+	height: 100px;
+	border: 1px solid #999;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.content3,
+.content4 {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.nav1:checked ~ .nav li {
+	background: #ddd;
+	color: #000;
+}
+
+.nav1:checked ~ .nav li:first-child {
+		background: #ff7300;
+		color: #fff;
+	}
+
+.nav2:checked ~ .nav li{
+	background: #ddd;
+	color: #000;
+}
+.nav2:checked ~ .nav li:last-child {
+  background: #ff7300;
+  color: #fff;
+}
+
+.nav1:checked ~ .content > div {
+	display: none;	
+}
+.nav1:checked ~ .content > div:first-child {
+  display: block;
+}
+.nav2:checked ~ .content > div {
+	display: none;
+}
+.nav2:checked ~ .content > div:last-child {
+  display: block;
+}
+
+.active2 {
+	background: #ff7300;
+	color: #fff;
+}
+
+.default {
+	display: block;
 }
