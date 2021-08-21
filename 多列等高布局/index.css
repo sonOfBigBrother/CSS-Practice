@@ -1,0 +1,107 @@
+#container{
+	width:400px;
+	background-color: #ddd;
+	overflow:hidden;
+	display:flex;
+    /* 默认值， 弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度。 */
+	align-items: stretch; 
+}
+
+.left,
+.right{
+	width:200px;
+	font-size: 16px;
+	line-height:24px;
+	color:#333;
+}
+
+.left{
+	background-color: deeppink;
+}
+.right{
+	background-color:yellowgreen;
+}
+
+#container2{
+	width:400px;
+	background:#eee;
+    /* 隐藏多余的高度 */
+	overflow:hidden;
+}
+
+
+.left2, .right2{
+	width:200px;
+	float:left;
+	font-size: 16px;
+	line-height:24px;
+	color:#333;
+	padding-bottom:5000px;
+	margin-bottom:-5000px;
+}
+
+.left2{
+	background-color: deeppink;
+}
+
+.right2{
+	background-color:yellowgreen;
+}
+
+#container3{
+	width:400px;
+	background-color: deeppink;
+	overflow:hidden;
+}
+
+.right3, .left3{
+	width:200px;
+	float:left;
+	font-size: 16px;
+	line-height:24px;
+	color:#333;
+}
+
+.right3{
+	background-color:yellowgreen;
+}
+
+#container4{
+	width:400px;
+	background-image:
+		linear-gradient(90deg, yellowgreen 50%, deeppink 0);
+	overflow:hidden;
+}
+
+.left4,
+.right4{
+	width:200px;
+	float:left;
+	font-size: 16px;
+	line-height:24px;
+	color:#333;
+}
+
+#container5{
+	width:400px;
+	background:#eee;
+	overflow:hidden;
+	display:table;
+}
+
+.left5,
+.right5{
+	display:table-cell;
+	width:200px;
+	font-size: 16px;
+	line-height:24px;
+	color:#333;
+}
+.left5{
+	background-color: deeppink;
+}
+.right5{
+	background-color:yellowgreen;
+}
+
+

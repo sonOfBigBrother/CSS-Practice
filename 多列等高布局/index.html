@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多列等高布局</title>
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>
+      <a href="https://github.com/chokcoco/iCSS/issues/55" target="_blank"
+        >查看原博</a
+      >
+    </h1>
+    <h3>display:flex</h3>
+    <div id="container">
+      <div class="left">多列等高布局左</div>
+      <div class="right">
+        多列等高布局右,使用(display:flex) 实现。多列等高布局,使用(display:flex)
+        实现。多列等高布局,使用(display:flex)
+        实现。多列等高布局,使用(display:flex) 实现
+      </div>
+    </div>
+    <h3>使用正负 margin 与 padding 相冲的方式实现</h3>
+    <div id="container2">
+      <div class="left2">多列等高布局左</div>
+      <div class="right2">
+        列等高布局,使用正负 margin 与 padding
+        相冲的方式实现。多列等高布局,使用正负 margin 与 padding 相冲的方式实现。
+      </div>
+    </div>
+    <h3>父容器设置背景色实现</h3>
+    <div id="container3">
+      <div class="left3">多列等高布局左</div>
+      <div class="right3">
+        列等高布局,使用父容器设置背景色的方式实现。多列等高布局,使用父容器设置背景色的方式实现。多列等高布局,使用父容器设置背景色的方式实现。多列等高布局,使用父容器设置背景色的方式实现。这个方法有个问题，只能适用于确定哪一列会毕竟高的情况下适用。
+      </div>
+    </div>
+    <h3>父容器使用多重背景色</h3>
+    <div id="container4">
+      <div class="left4">多列等高布局</div>
+      <div class="right4">
+        多列等高布局,如果是两列宽度固定或者百分比固定，可以试试这种父容器使用多重背景色的方法。<br />多列等高布局,如果是两列宽度固定或者百分比固定，可以试试这种父容器使用多重背景色的方法。
+      </div>
+    </div>
+    <h3>display:table-cell</h3>
+    <div id="container5">
+      <div class="row">
+        <div class="left5">多列等高布局</div>
+        <div class="right5">
+          多列等高布局,使用 display:table-cell 的方式实现。多列等高布局,使用
+          display:table-cell 的方式实现。多列等高布局,使用 display:table-cell
+          的方式实现。
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
