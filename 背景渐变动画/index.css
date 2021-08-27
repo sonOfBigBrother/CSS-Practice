@@ -1,0 +1,172 @@
+div {
+  position: relative;
+  width: 300px;
+  height: 100px;
+}
+.method1 {
+  background: linear-gradient(90deg, #ffc700 0%, #e91e1e 50%, #6f27b0 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  animation: bgposition 2s infinite linear alternate;
+}
+
+@keyframes bgposition {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.method2 {
+  background: linear-gradient(
+    90deg,
+    #ffc700 0%,
+    #e91e1e 33%,
+    #6f27b0 66%,
+    #00ff88 100%
+  );
+  background-position: 100% 0;
+  animation: bgSize 5s infinite ease-in-out alternate;
+}
+
+@keyframes bgSize {
+  0% {
+    background-size: 300% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.method3 {
+  position: relative;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+}
+.method3::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  bottom: -100%;
+  right: -100%;
+  background: linear-gradient(45deg, #ffc700 0%, #e91e1e 50%, #6f27b0 100%);
+  background-size: 100% 100%;
+  animation: bgposition2 8s infinite linear alternate;
+  z-index: -1;
+}
+
+@keyframes bgposition2 {
+  0% {
+    transform: translate(30%, 30%);
+  }
+  25% {
+    transform: translate(30%, -30%);
+  }
+  50% {
+    transform: translate(-30%, -30%);
+  }
+  75% {
+    transform: translate(-30%, 30%);
+  }
+  100% {
+    transform: translate(30%, 30%);
+  }
+}
+
+.method4 {
+  background: linear-gradient(30deg, #ffcc00, deeppink, #9c27b0);
+  animation: hueRotate 20s infinite alternate;
+}
+
+@keyframes hueRotate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@property --colorA {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: fuchsia;
+}
+
+@property --colorB {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: teal;
+}
+
+@property --colorC {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #f79188;
+}
+
+@property --colorD {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: yellow;
+}
+
+@property --colorE {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: orange;
+}
+
+@property --colorF {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: red;
+}
+
+.A {
+  background: linear-gradient(
+    45deg,
+    var(--colorA),
+    var(--colorB),
+    var(--colorC),
+    var(--colorD),
+    var(--colorE),
+    var(--colorF)
+  );
+  transition: --colorA 5000ms, --colorB 5000ms, --colorC 5000ms, --colorD 5000ms,
+    --colorE 5000ms, --colorF 5000ms;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.A:hover {
+  --colorA: red;
+  --colorB: orange;
+  --colorC: yellow;
+  --colorD: green;
+  --colorE: teal;
+  --colorF: fuchsia;
+}
+
+@keyframes change {
+  20% {
+    --colorA: red;
+    --colorC: #a93ee0;
+    --colorF: fuchsia;
+  }
+  40% {
+    --colorA: #ff3c41;
+    --colorC: #e228a0;
+    --colorF: #2e4c96;
+  }
+  60% {
+    --colorA: orange;
+    --colorC: green;
+    --colorF: teal;
+  }
+  80% {
+    --colorA: #ae63e4;
+    --colorC: #0ebeff;
+    --colorF: #efc371;
+  }
+}
