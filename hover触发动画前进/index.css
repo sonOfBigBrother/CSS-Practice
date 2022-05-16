@@ -1,0 +1,48 @@
+p {
+    position: relative;
+    /*等宽字体，每个字符占据的宽度是一样*/
+    font-family: monospace; 
+    /* hover me - you are a pig!这句话包含空格共26个字符 */
+    width: 26ch;
+    /* 关键帧typing持续时间3s，animation-timing-function为steps() */
+    animation: typing 3s steps(15, end);
+    /* 动画开始前的样式为动画运行时的第一帧，动画结束后停在最后一帧 */
+    animation-fill-mode: both;
+    /* 默认动画为暂停 */
+    animation-play-state: paused;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+p:hover  {
+    /* 鼠标悬浮时启动动画 */
+    animation-play-state: running;
+}
+
+p::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    animation: blink .8s linear infinite;
+}
+@keyframes blink {
+    0%, 50% {
+        border-right: 4px solid transparent;
+    }
+    50%, 100% {
+        border-right: 4px solid #000;
+    }
+}
+@keyframes typing {
+    /* 从11个字符开始 */
+    from {
+        width: 11ch;
+    }
+    /* 以26个字符结束 */
+    to {
+        width: 26ch;
+    }
+}
