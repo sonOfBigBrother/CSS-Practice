@@ -8,12 +8,12 @@ body {
   place-items: center;
 }
 
-p {
+.hover-1 {
   cursor: pointer;
   position: relative;
 }
 
-p::before {
+.hover-1::before {
   content: "";
   position: absolute;
   /* top right bottom left简写 */
@@ -27,8 +27,38 @@ p::before {
   /* 为transform属性添加动画 */
   transition: transform 0.5s ease-in-out;
 }
-p:hover::before {
+.hover-1:hover::before {
   /* 鼠标悬浮时从左显示 */
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* 使用 background-size + transition*/
+.hover-2 {
+  cursor: pointer;
+  background-image: linear-gradient(#1095c1, #1095c1);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: .4s;
+}
+
+.hover-2:hover {
+  background-size: 100% 100%;
+}
+
+/* 使用 background-position + transition*/
+.hover-3 {
+  cursor: pointer;
+  /* 优化前 */
+  /* --p未定义前，默认0% */
+  /* background: linear-gradient(#1095c1 0 0) left / var(--p, 0) no-repeat; */
+  background: linear-gradient(#1095c1 0 0) calc(100% - var(--p,0%)) / var(--p, 0%) no-repeat;
+  transition: .4s, background-position 0s;
+}
+
+/* hover时从左background-size开始增长 */
+.hover-3:hover {
+  --p: 100%;
+  /* 优化前 */
+  /* background-position: left; */
 }
